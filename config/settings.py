@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'fontawesomefree',
     'crispy_forms',
     'crispy_bootstrap5', 
+    'django_recaptcha',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -129,6 +130,11 @@ LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
 
 AUTHENTICATION_BACKENDS = ['users.backends.EmailBackend']
+
+RECAPTCHA_PUBLIC_KEY = '6LfiNF0tAAAAAMp5rslePg4CgNCZeEdFA6064lWR'
+RECAPTCHA_PRIVATE_KEY = '6LfiNF0tAAAAAM8JLYAGKJGBh85eMVeuPxP_BI1G'
+
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 
 TINYMCE_DEFAULT_CONFIG = {
     'custom_undo_redo_levels': 100,
