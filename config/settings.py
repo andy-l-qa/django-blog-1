@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -135,6 +136,9 @@ RECAPTCHA_PUBLIC_KEY = '6LfiNF0tAAAAAMp5rslePg4CgNCZeEdFA6064lWR'
 RECAPTCHA_PRIVATE_KEY = '6LfiNF0tAAAAAM8JLYAGKJGBh85eMVeuPxP_BI1G'
 
 SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 TINYMCE_DEFAULT_CONFIG = {
     'custom_undo_redo_levels': 100,
