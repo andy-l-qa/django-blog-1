@@ -159,6 +159,7 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880 # 5MB
 TINYMCE_DEFAULT_CONFIG = {
     'custom_undo_redo_levels': 100,
     'selector': 'textarea',
+    'promotion': False,
     "menubar": "file edit view insert format tools table help",
     'plugins': 'link image preview codesample contextmenu table code lists fullscreen',
     'toolbar1': 'undo redo | backcolor casechange permanentpen formatpainter removeformat formatselect fontselect fontsizeselect',
