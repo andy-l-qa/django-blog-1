@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('main.urls')),
     path('admin/', admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
+    path("", include("allauth.urls")), #most important
 ]
 
 if settings.DEBUG:
